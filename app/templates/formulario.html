@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="{% static 'formulario.css' %}">
+</head>
+<body>
+        <div class="conteudo">
+            
+            <form action="{% if db %}/update/{{db.id}}/{%else%}/create/{% endif %}" name="formulario" id="formulario" method="post">
+                
+                <h1>Cadastrar Livro</h1>
+
+                <div class="conteudo_formulario">
+                    {% csrf_token %}
+
+                    
+
+                    <div class="nome">
+
+                        <div class="label_nome">
+                        <label for="">Nome: </label>
+                        </div>
+
+
+                        <div class="input_nome">
+                        {{formulario.nome}}
+                        </div>
+
+                    </div>
+                    
+                    <div class="preco">
+
+                        <div class="label_preco">
+                        <label for="">Preço: </label>
+                        </div>
+
+                        <div class="input_preco">
+                        {{formulario.preco}}
+                        </div>
+                    </div>
+
+                    <div class="descricao">
+
+                        <div class="label_descricao">
+                        <label for="">Descrição: </label>
+                        </div>
+
+                        <div class="input_descricao">
+                        {{formulario.descricao}}
+                        </div>
+                    </div>
+
+                    <div class="isbn">
+
+                        <div class="label_isbn">
+                        <label for="">Isbn: </label>
+                        </div>
+
+                        <div class="input_isbn">
+                        {{formulario.isbn}}
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="botao">
+                    <input type="submit" value="Cadastrar">
+
+                    <button><a href="/">Voltar</a></button>
+                </div>
+                
+            </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    <h1>Tabela de livros</h1>
+
+    <div class="cadastrar">
+        <a href="/formulario">Cadastrar</a>
+    </div>
+
+    <table>
+        <tr class="cabecalho">
+            <th>Id</th>
+            <th>Nome livro</th>
+            <th>Preço livro</th>
+            <th>Ações</th>
+
+        </tr>
+
+        <tbody>
+            {% for dbs in db %}
+            <tr>
+                
+                <td>{{dbs.id}}</td>
+                <td>{{dbs.nome}}</td>
+                <td>{{dbs.preco}}</td>
+                
+
+                <td class="botao_td">
+                    <div class="botoes">
+                        <div class="vizualizar">
+                            <a href="/view/{{dbs.id}}/">Visualizar</a>
+                        </div>
+
+                        <div class="editar">
+                            <a href="/edit/{{dbs.id}}/">Editar</a>
+                        </div>
+
+                        <div class="deletar">
+                            <a href="/delete/{{dbs.id}}/">Deletar</a>
+                        </div>
+                    </div>
+                </td>
+                
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

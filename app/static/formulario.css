@@ -1,0 +1,83 @@
+body{
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.conteudo{
+    display: flex;
+    width: 40%;
+    margin: 0 auto;
+    justify-content: center;
+    border: 1px solid black;
+    box-shadow: 0 0 10px black;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.botao{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+button a{
+    text-decoration: none;
+    color: black;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    letter-spacing: 5px;
+}
+
+.nome, .preco{
+    margin-top: 10px;
+}
+
+
+
+.descricao{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.botao input{
+        background: #12c712;
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: 600;
+        color: white;
+        border: none;
+}
+
+.botao input:hover{
+    background-color:  #21c521;
+}
+
+.botao button{
+    background: rgb(0, 0, 255);
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    border: none;
+}
+
+.botao button a{
+    color: white;
+}
+
+.input_nome input, .input_preco input, .input_descricao input, .input_isbn input{
+    border-color: #c6c6c6;
+    border-width: 1px;
+    border-radius: 19px;
+    padding: 5px;
+    padding-left: 15px;
+    font-size: 16px;
+}
